@@ -25,11 +25,17 @@ void UncaughtExceptionHandler(NSException *exception) {
 
 @implementation YAUncaughtExceptionHandler
 
-#ifdef DEBUG
+//#ifdef DEBUG
 + (void)load {
-    [YAUncaughtExceptionHandler setDefaultHandler];
+    if (@available(iOS 10.0, *)) {
+        [NSTimer scheduledTimerWithTimeInterval:0.1 repeats:NO block:^(NSTimer * _Nonnull timer) {
+            [YAUncaughtExceptionHandler setDefaultHandler];
+        }];
+    } else {
+        // Fallback on earlier versions
+    }
 }
-#endif
+//#endif
    
 + (void)setDefaultHandler
 {
