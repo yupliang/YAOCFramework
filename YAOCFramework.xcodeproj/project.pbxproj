@@ -10,6 +10,8 @@
 		FD658A93247FC69C00640955 /* YAOCFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD658A89247FC69C00640955 /* YAOCFramework.framework */; };
 		FD658A98247FC69C00640955 /* YAOCFrameworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD658A97247FC69C00640955 /* YAOCFrameworkTests.m */; };
 		FD658A9A247FC69C00640955 /* YAOCFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = FD658A8C247FC69C00640955 /* YAOCFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FD658AA5247FC83600640955 /* YAUncaughtExceptionHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = FD658AA3247FC83600640955 /* YAUncaughtExceptionHandler.h */; };
+		FD658AA6247FC83600640955 /* YAUncaughtExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = FD658AA4247FC83600640955 /* YAUncaughtExceptionHandler.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		FD658A92247FC69C00640955 /* YAOCFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YAOCFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD658A97247FC69C00640955 /* YAOCFrameworkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YAOCFrameworkTests.m; sourceTree = "<group>"; };
 		FD658A99247FC69C00640955 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD658AA3247FC83600640955 /* YAUncaughtExceptionHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YAUncaughtExceptionHandler.h; sourceTree = "<group>"; };
+		FD658AA4247FC83600640955 /* YAUncaughtExceptionHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YAUncaughtExceptionHandler.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,8 @@
 			children = (
 				FD658A8C247FC69C00640955 /* YAOCFramework.h */,
 				FD658A8D247FC69C00640955 /* Info.plist */,
+				FD658AA3247FC83600640955 /* YAUncaughtExceptionHandler.h */,
+				FD658AA4247FC83600640955 /* YAUncaughtExceptionHandler.m */,
 			);
 			path = YAOCFramework;
 			sourceTree = "<group>";
@@ -93,6 +99,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD658AA5247FC83600640955 /* YAUncaughtExceptionHandler.h in Headers */,
 				FD658A9A247FC69C00640955 /* YAOCFramework.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -194,6 +201,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD658AA6247FC83600640955 /* YAUncaughtExceptionHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
