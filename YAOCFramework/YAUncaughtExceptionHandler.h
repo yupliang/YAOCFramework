@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface YAUncaughtExceptionHandler : NSObject
-+ (void)setDefaultHandler;
++ (void)setDefaultHandler:(NSString *)url;
 + (NSUncaughtExceptionHandler*)getHandler;
 @end
 
