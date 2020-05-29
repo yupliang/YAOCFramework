@@ -7,6 +7,7 @@
 //
 
 #import "YAUncaughtExceptionHandler.h"
+#import <sys/utsname.h>
 
 NSString *applicationDocumentsDirectory() {
     return [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
@@ -17,11 +18,8 @@ void UncaughtExceptionHandler(NSException *exception) {
      NSString *reason = [exception reason];
      NSString *name = [exception name];
    
-//     NSString *url = [NSString stringWithFormat:@"=============异常崩溃报告=============\nname:\n%@\nreason:\n%@\ncallStackSymbols:\n%@",
-//                   name,reason,[arr componentsJoinedByString:@"\n"]];
-     NSDictionary *dic  = @{@"name":name,@"reson":reason,@"callStackSymbols":[arr componentsJoinedByString:@"\n"]};
-     NSString *path = [applicationDocumentsDirectory() stringByAppendingPathComponent:@"Exception.txt"];
-//     [ writeToFile:path atomically:YES encoding:NSUTF8StringEncoding error:nil];
+    NSDictionary *dic  = @{@"name":name,@"reason":reason,@"callStackSymbols":[arr componentsJoinedByString:@"\n"]};
+    NSString *path = [applicationDocumentsDirectory() stringByAppendingPathComponent:@"Exception.txt"];
     [[NSJSONSerialization dataWithJSONObject:dic options:0 error:nil] writeToFile:path atomically:YES];
 }
 
@@ -39,7 +37,15 @@ void UncaughtExceptionHandler(NSException *exception) {
 //    }
 //}
 //#endif
-   
+   NSString* deviceName()
+      {
+          struct utsname systemInfo;
+          uname(&systemInfo);
+
+          return [NSString stringWithCString:systemInfo.machine
+                                    encoding:NSUTF8StringEncoding];
+      }
+
 + (void)setDefaultHandler:(NSString *)urlstr
 {
      NSSetUncaughtExceptionHandler (&UncaughtExceptionHandler);
@@ -58,10 +64,20 @@ void UncaughtExceptionHandler(NSException *exception) {
             
             [request addValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
             [request addValue:@"*/*" forHTTPHeaderField:@"Accept"];
-            
             [request setHTTPMethod:@"POST"];
-            //        NSDictionary *myDictionary = @{@"version":@"1.1.2",@"table":@"iosException"};
-            NSString *str = [NSString stringWithFormat:@"{\"version\":\"%@\",\"table\":\"iosException\",\"name\":\"%@\",\"callStackSymbols\":\"%@\"}", @"1.1.2", dic[@"name"],dic[@"callStackSymbols"]];
+            
+            NSMutableDictionary *mutableDic = [NSMutableDictionary dictionaryWithDictionary:dic];
+            [mutableDic setValue:@"iosException" forKey:@"table"];
+            NSDictionary *infoDic = [[NSBundle mainBundle] infoDictionary];
+            NSString *appBuildVersion = [infoDic objectForKey:@"CFBundleShortVersionString"];
+            [mutableDic setValue:appBuildVersion forKey:@"version"];
+            [mutableDic setValue:[UIDevice currentDevice].systemVersion forKey:@"ios"];
+            [mutableDic setValue:[UIDevice currentDevice].name forKey:@"deviceName"];
+            [mutableDic setValue:deviceName() forKey:@"model"];
+            NSData *jsonData = [NSJSONSerialization dataWithJSONObject:mutableDic
+            options:0
+              error:nil];
+            NSString *str = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
             NSURLComponents *components = [NSURLComponents new];
             components.queryItems = @[[NSURLQueryItem queryItemWithName:@"row" value:str]];
             NSLog(@"query-- %@", components.query);
@@ -69,7 +85,6 @@ void UncaughtExceptionHandler(NSException *exception) {
             
             NSURLSessionDataTask *postDataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
                 NSLog(@"response %@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
-                //            NSLog(@"response %@ error %@", response,error);
             }];
             
             [postDataTask resume];
