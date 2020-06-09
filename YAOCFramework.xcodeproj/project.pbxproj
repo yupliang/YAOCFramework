@@ -12,6 +12,8 @@
 		FD658A9A247FC69C00640955 /* YAOCFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = FD658A8C247FC69C00640955 /* YAOCFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FD658AA5247FC83600640955 /* YAUncaughtExceptionHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = FD658AA3247FC83600640955 /* YAUncaughtExceptionHandler.h */; };
 		FD658AA6247FC83600640955 /* YAUncaughtExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = FD658AA4247FC83600640955 /* YAUncaughtExceptionHandler.m */; };
+		FD66E955248F9AD2000A7D5C /* YAURLProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = FD66E953248F9AD2000A7D5C /* YAURLProtocol.h */; };
+		FD66E956248F9AD2000A7D5C /* YAURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = FD66E954248F9AD2000A7D5C /* YAURLProtocol.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +35,8 @@
 		FD658A99247FC69C00640955 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD658AA3247FC83600640955 /* YAUncaughtExceptionHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YAUncaughtExceptionHandler.h; sourceTree = "<group>"; };
 		FD658AA4247FC83600640955 /* YAUncaughtExceptionHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YAUncaughtExceptionHandler.m; sourceTree = "<group>"; };
+		FD66E953248F9AD2000A7D5C /* YAURLProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YAURLProtocol.h; sourceTree = "<group>"; };
+		FD66E954248F9AD2000A7D5C /* YAURLProtocol.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YAURLProtocol.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 				FD658A8D247FC69C00640955 /* Info.plist */,
 				FD658AA3247FC83600640955 /* YAUncaughtExceptionHandler.h */,
 				FD658AA4247FC83600640955 /* YAUncaughtExceptionHandler.m */,
+				FD66E953248F9AD2000A7D5C /* YAURLProtocol.h */,
+				FD66E954248F9AD2000A7D5C /* YAURLProtocol.m */,
 			);
 			path = YAOCFramework;
 			sourceTree = "<group>";
@@ -101,6 +107,7 @@
 			files = (
 				FD658AA5247FC83600640955 /* YAUncaughtExceptionHandler.h in Headers */,
 				FD658A9A247FC69C00640955 /* YAOCFramework.h in Headers */,
+				FD66E955248F9AD2000A7D5C /* YAURLProtocol.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD658AA6247FC83600640955 /* YAUncaughtExceptionHandler.m in Sources */,
+				FD66E956248F9AD2000A7D5C /* YAURLProtocol.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
