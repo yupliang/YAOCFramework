@@ -8,6 +8,8 @@
 
 #import "YAUncaughtExceptionHandler.h"
 #import <sys/utsname.h>
+#import <UIKit/UIKit.h>
+#import "Func.h"
 
 NSString *applicationDocumentsDirectory() {
     return [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
@@ -37,15 +39,6 @@ void UncaughtExceptionHandler(NSException *exception) {
 //    }
 //}
 //#endif
-   NSString* deviceName()
-      {
-          struct utsname systemInfo;
-          uname(&systemInfo);
-
-          return [NSString stringWithCString:systemInfo.machine
-                                    encoding:NSUTF8StringEncoding];
-      }
-
 + (void)setDefaultHandler:(NSString *)urlstr
 {
      NSSetUncaughtExceptionHandler (&UncaughtExceptionHandler);
