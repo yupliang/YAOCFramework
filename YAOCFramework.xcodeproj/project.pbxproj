@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD241C73249C5A3700C4EDEC /* YAFunc.h in Headers */ = {isa = PBXBuildFile; fileRef = FD241C71249C5A3700C4EDEC /* YAFunc.h */; };
+		FD241C74249C5A3700C4EDEC /* YAFunc.m in Sources */ = {isa = PBXBuildFile; fileRef = FD241C72249C5A3700C4EDEC /* YAFunc.m */; };
 		FD5BF59C249B7A7B00F99CD7 /* UploadDataToServer.h in Headers */ = {isa = PBXBuildFile; fileRef = FD5BF59A249B7A7B00F99CD7 /* UploadDataToServer.h */; };
 		FD5BF59D249B7A7B00F99CD7 /* UploadDataToServer.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5BF59B249B7A7B00F99CD7 /* UploadDataToServer.m */; };
 		FD658A93247FC69C00640955 /* YAOCFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD658A89247FC69C00640955 /* YAOCFramework.framework */; };
@@ -27,7 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		FD241C70249B7F2000C4EDEC /* Func.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Func.h; sourceTree = "<group>"; };
+		FD241C71249C5A3700C4EDEC /* YAFunc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YAFunc.h; sourceTree = "<group>"; };
+		FD241C72249C5A3700C4EDEC /* YAFunc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YAFunc.m; sourceTree = "<group>"; };
 		FD5BF59A249B7A7B00F99CD7 /* UploadDataToServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UploadDataToServer.h; sourceTree = "<group>"; };
 		FD5BF59B249B7A7B00F99CD7 /* UploadDataToServer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UploadDataToServer.m; sourceTree = "<group>"; };
 		FD658A89247FC69C00640955 /* YAOCFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YAOCFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,7 +89,8 @@
 				FD658AA4247FC83600640955 /* YAUncaughtExceptionHandler.m */,
 				FD5BF59A249B7A7B00F99CD7 /* UploadDataToServer.h */,
 				FD5BF59B249B7A7B00F99CD7 /* UploadDataToServer.m */,
-				FD241C70249B7F2000C4EDEC /* Func.h */,
+				FD241C71249C5A3700C4EDEC /* YAFunc.h */,
+				FD241C72249C5A3700C4EDEC /* YAFunc.m */,
 			);
 			path = YAOCFramework;
 			sourceTree = "<group>";
@@ -107,6 +111,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD241C73249C5A3700C4EDEC /* YAFunc.h in Headers */,
 				FD5BF59C249B7A7B00F99CD7 /* UploadDataToServer.h in Headers */,
 				FD658AA5247FC83600640955 /* YAUncaughtExceptionHandler.h in Headers */,
 				FD658A9A247FC69C00640955 /* YAOCFramework.h in Headers */,
@@ -211,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD5BF59D249B7A7B00F99CD7 /* UploadDataToServer.m in Sources */,
+				FD241C74249C5A3700C4EDEC /* YAFunc.m in Sources */,
 				FD658AA6247FC83600640955 /* YAUncaughtExceptionHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

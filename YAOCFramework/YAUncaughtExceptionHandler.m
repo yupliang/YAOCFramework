@@ -7,9 +7,8 @@
 //
 
 #import "YAUncaughtExceptionHandler.h"
-#import <sys/utsname.h>
 #import <UIKit/UIKit.h>
-#import "Func.h"
+#import "YAFunc.h"
 
 NSString *applicationDocumentsDirectory() {
     return [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
@@ -66,7 +65,7 @@ void UncaughtExceptionHandler(NSException *exception) {
             [mutableDic setValue:appBuildVersion forKey:@"version"];
             [mutableDic setValue:[UIDevice currentDevice].systemVersion forKey:@"ios"];
             [mutableDic setValue:[UIDevice currentDevice].name forKey:@"deviceName"];
-            [mutableDic setValue:deviceName() forKey:@"model"];
+            [mutableDic setValue:[YAFunc deviceName] forKey:@"model"];
             NSData *jsonData = [NSJSONSerialization dataWithJSONObject:mutableDic
             options:0
               error:nil];

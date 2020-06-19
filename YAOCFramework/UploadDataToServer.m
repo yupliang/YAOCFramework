@@ -9,7 +9,7 @@
 #import "UploadDataToServer.h"
 #import <UIKit/UIKit.h>
 #import <sys/utsname.h>
-#import "Func.h"
+#import "YAFunc.h"
 
 @implementation UploadDataToServer
 
@@ -31,7 +31,7 @@
     [mutableDic setValue:appBuildVersion forKey:@"version"];
     [mutableDic setValue:[UIDevice currentDevice].systemVersion forKey:@"ios"];
     [mutableDic setValue:[UIDevice currentDevice].name forKey:@"deviceName"];
-    [mutableDic setValue:deviceName() forKey:@"model"];
+    [mutableDic setValue:[YAFunc deviceName] forKey:@"model"];
     [mutableDic setValue:msg forKey:@"error"];
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:mutableDic
     options:0

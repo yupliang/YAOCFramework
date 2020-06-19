@@ -1,13 +1,13 @@
 //
-//  Func.h
+//  YAFunc.m
 //  YAOCFramework
 //
-//  Created by app-01 on 2020/6/18.
+//  Created by app-01 on 2020/6/19.
 //  Copyright © 2020 app-01 org. All rights reserved.
 //
 
-#ifndef Func_h
-#define Func_h
+#import "YAFunc.h"
+#import <sys/utsname.h>
 
 NSString* deviceName()
 {
@@ -18,4 +18,8 @@ NSString* deviceName()
                               encoding:NSUTF8StringEncoding];
 }
 
-#endif /* Func_h */
+@implementation YAFunc
++ (NSString *)deviceName {
+    return deviceName();
+}
+@end
