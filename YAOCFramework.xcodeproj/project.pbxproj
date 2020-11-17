@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD2C05152563728E00D506CF /* YASignInWithApple.h in Headers */ = {isa = PBXBuildFile; fileRef = FD2C05132563728E00D506CF /* YASignInWithApple.h */; };
+		FD2C05162563728E00D506CF /* YASignInWithApple.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2C05142563728E00D506CF /* YASignInWithApple.m */; };
 		FD658A93247FC69C00640955 /* YAOCFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD658A89247FC69C00640955 /* YAOCFramework.framework */; };
 		FD658A98247FC69C00640955 /* YAOCFrameworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD658A97247FC69C00640955 /* YAOCFrameworkTests.m */; };
 		FD658A9A247FC69C00640955 /* YAOCFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = FD658A8C247FC69C00640955 /* YAOCFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -27,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FD2C05132563728E00D506CF /* YASignInWithApple.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YASignInWithApple.h; sourceTree = "<group>"; };
+		FD2C05142563728E00D506CF /* YASignInWithApple.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YASignInWithApple.m; sourceTree = "<group>"; };
 		FD658A89247FC69C00640955 /* YAOCFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YAOCFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD658A8C247FC69C00640955 /* YAOCFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YAOCFramework.h; sourceTree = "<group>"; };
 		FD658A8D247FC69C00640955 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -85,6 +89,8 @@
 				FD658AA4247FC83600640955 /* YAUncaughtExceptionHandler.m */,
 				FD66E953248F9AD2000A7D5C /* YAURLProtocol.h */,
 				FD66E954248F9AD2000A7D5C /* YAURLProtocol.m */,
+				FD2C05132563728E00D506CF /* YASignInWithApple.h */,
+				FD2C05142563728E00D506CF /* YASignInWithApple.m */,
 			);
 			path = YAOCFramework;
 			sourceTree = "<group>";
@@ -106,6 +112,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD658AA5247FC83600640955 /* YAUncaughtExceptionHandler.h in Headers */,
+				FD2C05152563728E00D506CF /* YASignInWithApple.h in Headers */,
 				FD658A9A247FC69C00640955 /* YAOCFramework.h in Headers */,
 				FD66E955248F9AD2000A7D5C /* YAURLProtocol.h in Headers */,
 			);
@@ -208,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD2C05162563728E00D506CF /* YASignInWithApple.m in Sources */,
 				FD658AA6247FC83600640955 /* YAUncaughtExceptionHandler.m in Sources */,
 				FD66E956248F9AD2000A7D5C /* YAURLProtocol.m in Sources */,
 			);

@@ -7,6 +7,7 @@
 //
 
 #import "YAUncaughtExceptionHandler.h"
+#import <UIKit/UIKit.h>
 #import <sys/utsname.h>
 
 NSString *applicationDocumentsDirectory() {

@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "YAOCFramework"
-  spec.version      = "0.0.2"
+  spec.version      = "0.0.6"
   spec.summary      = "A short description of YAOCFramework."
 
   # This description is used to generate tags and improve search results.
@@ -51,7 +51,7 @@ Pod::Spec.new do |spec|
   #  profile URL.
   #
 
-  spec.author             = { "yupeiliang" => "yupeiliang@fotoable.com" }
+  spec.author             = { "yupeiliang" => "yupeiliang110@163.com" }
   # Or just: spec.author    = "yupeiliang"
   # spec.authors            = { "yupeiliang" => "yupeiliang@fotoable.com" }
   # spec.social_media_url   = "https://twitter.com/yupeiliang"
